@@ -1,0 +1,1324 @@
+[ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Graphics,1,14,22]; ]
+import Toybox.Graphics;
+[ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+import Toybox.Lang;
+[ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [System,3,14,20]; ]
+import Toybox.System;
+[ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [WatchUi,4,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [Math,5,14,18]; ]
+import Toybox.Math;
+[ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 6; @symbol_importdef<0> = [Toybox,6,7,13]; @symbol_importdef<1> = [Time,6,14,18]; ]
+import Toybox.Time;
+[ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 7; @symbol_importdef<0> = [Toybox,7,7,13]; @symbol_importdef<1> = [Time,7,14,18]; @symbol_importdef<2> = [Gregorian,7,19,28]; ]
+import Toybox.Time.Gregorian;
+[ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 8; @symbol_importdef<0> = [Toybox,8,7,13]; @symbol_importdef<1> = [ActivityMonitor,8,14,29]; ]
+import Toybox.ActivityMonitor;
+[ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 10; @symbol_classdef = [MondaineFaceView,10,6,22]; @symbol_extends<0> = [WatchUi,10,31,38]; @symbol_extends<1> = [WatchFace,10,39,48]; ]
+class MondaineFaceView extends WatchUi.WatchFace {
+    [ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 10; ]
+    <init> {
+    }
+    [ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 10; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 12; @position = 8; @symbol_vardef = [screenWidth,12,8,19]; ]
+    var screenWidth;
+    [ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 13; @position = 8; @symbol_vardef = [screenHeight,13,8,20]; ]
+    var screenHeight;
+    [ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 14; @position = 8; @symbol_vardef = [centerX,14,8,15]; ]
+    var centerX;
+    [ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 15; @position = 8; @symbol_vardef = [centerY,15,8,15]; ]
+    var centerY;
+    [ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 16; @position = 8; @symbol_vardef = [isAwake,16,8,15]; ]
+    var isAwake = true;
+    [ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 18; @symbol_functiondef = [initialize,18,13,23]; ]
+    function initialize() as Void {
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_18_26_20_4_start:
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 19 8 ]
+        symbol [ WatchFace %tmp.2 19 8 17 ];
+        %tmp.2 = getv ? :WatchFace;
+        symbol [ initialize %tmp.3 19 18 28 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_18_26_20_4_stop:
+    }
+    [ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 22; @symbol_functiondef = [onLayout,22,13,21]; @symbol_param<0> = [dc,22,22,24]; @symbol_param<0>_type<0> = [Dc,22,28,30]; ]
+    function onLayout(dc as Dc) as Void {
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_22_40_27_4_start:
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 23 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 23 22 24 ];
+        symbol [ getWidth %tmp.2 23 25 33 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        symbol [ screenWidth ? 23 8 19 ];
+        putv self :screenWidth %tmp.3;
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 24 8 ]
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 24 23 25 ];
+        symbol [ getHeight %tmp.5 24 26 35 ];
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        symbol [ screenHeight ? 24 8 20 ];
+        putv self :screenHeight %tmp.6;
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 25 8 ]
+        symbol [ screenWidth %tmp.8 25 18 29 ];
+        %tmp.8 = getv ? :screenWidth;
+        %tmp.9 = 2;
+        %tmp.10 = div %tmp.8 %tmp.9;
+        symbol [ centerX ? 25 8 15 ];
+        putv self :centerX %tmp.10;
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 26 8 ]
+        symbol [ screenHeight %tmp.12 26 18 30 ];
+        %tmp.12 = getv ? :screenHeight;
+        %tmp.13 = 2;
+        %tmp.14 = div %tmp.12 %tmp.13;
+        symbol [ centerY ? 26 8 15 ];
+        putv self :centerY %tmp.14;
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_22_40_27_4_stop:
+    }
+    [ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 29; @symbol_functiondef = [onUpdate,29,13,21]; @symbol_param<0> = [dc,29,22,24]; @symbol_param<0>_type<0> = [Dc,29,28,30]; ]
+    function onUpdate(dc as Dc) as Void {
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_29_40_67_4_start:
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 31 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 31 8 10 ];
+        symbol [ setColor %tmp.2 31 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 31 20 28 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.4 31 29 40 ];
+        %tmp.4 = getv %tmp.3 :COLOR_WHITE;
+        symbol [ Graphics %tmp.5 31 42 50 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.6 31 51 62 ];
+        %tmp.6 = getv %tmp.5 :COLOR_WHITE;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 32 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 32 8 10 ];
+        symbol [ clear %tmp.8 32 11 16 ];
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 35 8 ]
+        %tmp.9 = self;
+        symbol [ drawTicks %tmp.10 35 8 17 ];
+        %tmp.10 = getv function %tmp.9 :drawTicks;
+        %tmp.11 = lgetv %dc;
+        symbol [ dc %tmp.11 35 18 20 ];
+        invoke %tmp.9 %tmp.10(%tmp.11);
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 42 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_29_40_67_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_29_40_67_4_stop" ]
+        %info.1 = local;
+        symbol [ info %info.1 42 12 16 ];
+        symbol [ ActivityMonitor %tmp.12 42 19 34 ];
+        %tmp.12 = getm $.Toybox.ActivityMonitor;
+        symbol [ getInfo %tmp.13 42 35 42 ];
+        %tmp.13 = getv function %tmp.12 :getInfo;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        lputv %info.1 %tmp.14;
+        symbol [ info %info.1 42 12 16 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 43 8 ]
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_43_8_45_8_if_stmt:
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_43_12_43_61_begin:
+        %tmp.15 = lgetv %info.1;
+        symbol [ info %tmp.15 43 12 16 ];
+        symbol [ moveBarLevel %tmp.16 43 17 29 ];
+        %tmp.16 = getv %tmp.15 :moveBarLevel;
+        %tmp.17 = null;
+        %tmp.18 = ne %tmp.16 %tmp.17;
+        bf %tmp.18 @C__GitHub_MondaineFace_source_MondaineFaceView_mc_43_8_45_8_if_end;
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_43_41_43_61_true:
+        %tmp.19 = lgetv %info.1;
+        symbol [ info %tmp.19 43 41 45 ];
+        symbol [ moveBarLevel %tmp.20 43 46 58 ];
+        %tmp.20 = getv %tmp.19 :moveBarLevel;
+        %tmp.21 = 0;
+        %tmp.22 = gt %tmp.20 %tmp.21;
+        push %tmp.22;
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_43_41_43_61_end:
+        %tmp.23 = phi [%tmp.18 @C__GitHub_MondaineFace_source_MondaineFaceView_mc_43_12_43_61_begin] [%tmp.22 @C__GitHub_MondaineFace_source_MondaineFaceView_mc_43_41_43_61_true] [%tmp.23 @C__GitHub_MondaineFace_source_MondaineFaceView_mc_43_41_43_61_end];
+        bf %tmp.23 @C__GitHub_MondaineFace_source_MondaineFaceView_mc_43_8_45_8_if_end;
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_43_8_45_8_if_true:
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_43_64_45_8_start:
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 44 12 ]
+        %tmp.24 = self;
+        symbol [ drawMoveAlert %tmp.25 44 12 25 ];
+        %tmp.25 = getv function %tmp.24 :drawMoveAlert;
+        %tmp.26 = lgetv %dc;
+        symbol [ dc %tmp.26 44 26 28 ];
+        %tmp.27 = lgetv %info.1;
+        symbol [ info %tmp.27 44 30 34 ];
+        symbol [ moveBarLevel %tmp.28 44 35 47 ];
+        %tmp.28 = getv %tmp.27 :moveBarLevel;
+        invoke %tmp.24 %tmp.25(%tmp.26, %tmp.28);
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_43_64_45_8_stop:
+        goto @C__GitHub_MondaineFace_source_MondaineFaceView_mc_43_8_45_8_if_end;
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_43_8_45_8_if_end:
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 48 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_29_40_67_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_29_40_67_4_stop" ]
+        %clockTime.2 = local;
+        symbol [ clockTime %clockTime.2 48 12 21 ];
+        symbol [ System %tmp.29 48 24 30 ];
+        %tmp.29 = getm $.Toybox.System;
+        symbol [ getClockTime %tmp.30 48 31 43 ];
+        %tmp.30 = getv function %tmp.29 :getClockTime;
+        %tmp.31 = invoke %tmp.29 %tmp.30();
+        lputv %clockTime.2 %tmp.31;
+        symbol [ clockTime %clockTime.2 48 12 21 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 49 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_29_40_67_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_29_40_67_4_stop" ]
+        %hour.3 = local;
+        symbol [ hour %hour.3 49 12 16 ];
+        %tmp.32 = lgetv %clockTime.2;
+        symbol [ clockTime %tmp.32 49 19 28 ];
+        symbol [ hour %tmp.33 49 29 33 ];
+        %tmp.33 = getv %tmp.32 :hour;
+        lputv %hour.3 %tmp.33;
+        symbol [ hour %hour.3 49 12 16 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 50 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_29_40_67_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_29_40_67_4_stop" ]
+        %min.4 = local;
+        symbol [ min %min.4 50 12 15 ];
+        %tmp.34 = lgetv %clockTime.2;
+        symbol [ clockTime %tmp.34 50 18 27 ];
+        symbol [ min %tmp.35 50 28 31 ];
+        %tmp.35 = getv %tmp.34 :min;
+        lputv %min.4 %tmp.35;
+        symbol [ min %min.4 50 12 15 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 51 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_29_40_67_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_29_40_67_4_stop" ]
+        %sec.5 = local;
+        symbol [ sec %sec.5 51 12 15 ];
+        %tmp.36 = lgetv %clockTime.2;
+        symbol [ clockTime %tmp.36 51 18 27 ];
+        symbol [ sec %tmp.37 51 28 31 ];
+        %tmp.37 = getv %tmp.36 :sec;
+        lputv %sec.5 %tmp.37;
+        symbol [ sec %sec.5 51 12 15 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 56 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_29_40_67_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_29_40_67_4_stop" ]
+        %hourAngle.6 = local;
+        symbol [ hourAngle %hourAngle.6 56 12 21 ];
+        %tmp.38 = lgetv %hour.3;
+        symbol [ hour %tmp.38 56 25 29 ];
+        %tmp.39 = 12;
+        %tmp.40 = mod %tmp.38 %tmp.39;
+        %tmp.41 = 30;
+        %tmp.42 = mul %tmp.40 %tmp.41;
+        %tmp.43 = lgetv %min.4;
+        symbol [ min %tmp.43 56 44 47 ];
+        %tmp.44 = 2.0;
+        %tmp.45 = div %tmp.43 %tmp.44;
+        %tmp.46 = add %tmp.42 %tmp.45;
+        lputv %hourAngle.6 %tmp.46;
+        symbol [ hourAngle %hourAngle.6 56 12 21 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 57 8 ]
+        %tmp.47 = self;
+        symbol [ drawHourHand %tmp.48 57 8 20 ];
+        %tmp.48 = getv function %tmp.47 :drawHourHand;
+        %tmp.49 = lgetv %dc;
+        symbol [ dc %tmp.49 57 21 23 ];
+        %tmp.50 = lgetv %hourAngle.6;
+        symbol [ hourAngle %tmp.50 57 25 34 ];
+        %tmp.51 = 60;
+        %tmp.52 = 14;
+        symbol [ Graphics %tmp.53 57 44 52 ];
+        %tmp.53 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.54 57 53 64 ];
+        %tmp.54 = getv %tmp.53 :COLOR_BLACK;
+        invoke %tmp.47 %tmp.48(%tmp.49, %tmp.50, %tmp.51, %tmp.52, %tmp.54);
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 60 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_29_40_67_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_29_40_67_4_stop" ]
+        %minAngle.7 = local;
+        symbol [ minAngle %minAngle.7 60 12 20 ];
+        %tmp.55 = lgetv %min.4;
+        symbol [ min %tmp.55 60 23 26 ];
+        %tmp.56 = 6;
+        %tmp.57 = mul %tmp.55 %tmp.56;
+        lputv %minAngle.7 %tmp.57;
+        symbol [ minAngle %minAngle.7 60 12 20 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 61 8 ]
+        %tmp.58 = self;
+        symbol [ drawMinuteHand %tmp.59 61 8 22 ];
+        %tmp.59 = getv function %tmp.58 :drawMinuteHand;
+        %tmp.60 = lgetv %dc;
+        symbol [ dc %tmp.60 61 23 25 ];
+        %tmp.61 = lgetv %minAngle.7;
+        symbol [ minAngle %tmp.61 61 27 35 ];
+        %tmp.62 = 90;
+        %tmp.63 = 10;
+        symbol [ Graphics %tmp.64 61 45 53 ];
+        %tmp.64 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.65 61 54 65 ];
+        %tmp.65 = getv %tmp.64 :COLOR_BLACK;
+        invoke %tmp.58 %tmp.59(%tmp.60, %tmp.61, %tmp.62, %tmp.63, %tmp.65);
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 63 8 ]
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_63_8_66_8_if_stmt:
+        symbol [ isAwake %tmp.67 63 12 19 ];
+        %tmp.67 = getv ? :isAwake;
+        bf %tmp.67 @C__GitHub_MondaineFace_source_MondaineFaceView_mc_63_8_66_8_if_end;
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_63_8_66_8_if_true:
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_63_21_66_8_start:
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 64 12 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_63_21_66_8_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_63_21_66_8_stop" ]
+        %secAngle.8 = local;
+        symbol [ secAngle %secAngle.8 64 16 24 ];
+        %tmp.68 = lgetv %sec.5;
+        symbol [ sec %tmp.68 64 27 30 ];
+        %tmp.69 = 6;
+        %tmp.70 = mul %tmp.68 %tmp.69;
+        lputv %secAngle.8 %tmp.70;
+        symbol [ secAngle %secAngle.8 64 16 24 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 65 12 ]
+        %tmp.71 = self;
+        symbol [ drawSecondHand %tmp.72 65 12 26 ];
+        %tmp.72 = getv function %tmp.71 :drawSecondHand;
+        %tmp.73 = lgetv %dc;
+        symbol [ dc %tmp.73 65 27 29 ];
+        %tmp.74 = lgetv %secAngle.8;
+        symbol [ secAngle %tmp.74 65 31 39 ];
+        invoke %tmp.71 %tmp.72(%tmp.73, %tmp.74);
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_63_21_66_8_stop:
+        goto @C__GitHub_MondaineFace_source_MondaineFaceView_mc_63_8_66_8_if_end;
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_63_8_66_8_if_end:
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_29_40_67_4_stop:
+    }
+    [ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 71; @symbol_functiondef = [drawBranding,71,13,25]; @symbol_param<0> = [dc,71,26,28]; ]
+    function drawBranding(dc) {
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_71_30_77_4_start:
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 73 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 73 8 10 ];
+        symbol [ setColor %tmp.2 73 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 73 20 28 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.4 73 29 40 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        symbol [ Graphics %tmp.5 73 42 50 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.6 73 51 68 ];
+        %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 74 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 74 8 10 ];
+        symbol [ drawText %tmp.8 74 11 19 ];
+        %tmp.8 = getv function %tmp.7 :drawText;
+        symbol [ centerX %tmp.10 74 20 27 ];
+        %tmp.10 = getv ? :centerX;
+        symbol [ centerY %tmp.12 74 29 36 ];
+        %tmp.12 = getv ? :centerY;
+        %tmp.13 = 65;
+        %tmp.14 = sub %tmp.12 %tmp.13;
+        symbol [ Graphics %tmp.15 74 43 51 ];
+        %tmp.15 = getm $.Toybox.Graphics;
+        symbol [ FONT_SYSTEM_XTINY %tmp.16 74 52 69 ];
+        %tmp.16 = getv %tmp.15 :FONT_SYSTEM_XTINY;
+        %tmp.17 = "MONDAINE";
+        symbol [ Graphics %tmp.18 74 83 91 ];
+        %tmp.18 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.19 74 92 111 ];
+        %tmp.19 = getv %tmp.18 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.7 %tmp.8(%tmp.10, %tmp.14, %tmp.16, %tmp.17, %tmp.19);
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 75 8 ]
+        %tmp.20 = lgetv %dc;
+        symbol [ dc %tmp.20 75 8 10 ];
+        symbol [ setColor %tmp.21 75 11 19 ];
+        %tmp.21 = getv function %tmp.20 :setColor;
+        symbol [ Graphics %tmp.22 75 20 28 ];
+        %tmp.22 = getm $.Toybox.Graphics;
+        symbol [ COLOR_RED %tmp.23 75 29 38 ];
+        %tmp.23 = getv %tmp.22 :COLOR_RED;
+        symbol [ Graphics %tmp.24 75 40 48 ];
+        %tmp.24 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.25 75 49 66 ];
+        %tmp.25 = getv %tmp.24 :COLOR_TRANSPARENT;
+        invoke %tmp.20 %tmp.21(%tmp.23, %tmp.25);
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 76 8 ]
+        %tmp.26 = lgetv %dc;
+        symbol [ dc %tmp.26 76 8 10 ];
+        symbol [ drawText %tmp.27 76 11 19 ];
+        %tmp.27 = getv function %tmp.26 :drawText;
+        symbol [ centerX %tmp.29 76 20 27 ];
+        %tmp.29 = getv ? :centerX;
+        symbol [ centerY %tmp.31 76 29 36 ];
+        %tmp.31 = getv ? :centerY;
+        %tmp.32 = 50;
+        %tmp.33 = sub %tmp.31 %tmp.32;
+        symbol [ Graphics %tmp.34 76 43 51 ];
+        %tmp.34 = getm $.Toybox.Graphics;
+        symbol [ FONT_SYSTEM_XTINY %tmp.35 76 52 69 ];
+        %tmp.35 = getv %tmp.34 :FONT_SYSTEM_XTINY;
+        %tmp.36 = "SBB CFF FFS";
+        symbol [ Graphics %tmp.37 76 86 94 ];
+        %tmp.37 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.38 76 95 114 ];
+        %tmp.38 = getv %tmp.37 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.26 %tmp.27(%tmp.29, %tmp.33, %tmp.35, %tmp.36, %tmp.38);
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_71_30_77_4_stop:
+    }
+    [ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 79; @symbol_functiondef = [drawMoveAlert,79,13,26]; @symbol_param<0> = [dc,79,27,29]; @symbol_param<1> = [level,79,31,36]; ]
+    function drawMoveAlert(dc, level) {
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_79_38_99_4_start:
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 83 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_79_38_99_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_79_38_99_4_stop" ]
+        %blockWidth.1 = local;
+        symbol [ blockWidth %blockWidth.1 83 12 22 ];
+        %tmp.1 = 12;
+        lputv %blockWidth.1 %tmp.1;
+        symbol [ blockWidth %blockWidth.1 83 12 22 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 84 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_79_38_99_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_79_38_99_4_stop" ]
+        %blockHeight.2 = local;
+        symbol [ blockHeight %blockHeight.2 84 12 23 ];
+        %tmp.2 = 8;
+        lputv %blockHeight.2 %tmp.2;
+        symbol [ blockHeight %blockHeight.2 84 12 23 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 85 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_79_38_99_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_79_38_99_4_stop" ]
+        %gap.3 = local;
+        symbol [ gap %gap.3 85 12 15 ];
+        %tmp.3 = 4;
+        lputv %gap.3 %tmp.3;
+        symbol [ gap %gap.3 85 12 15 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 88 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_79_38_99_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_79_38_99_4_stop" ]
+        %totalWidth.4 = local;
+        symbol [ totalWidth %totalWidth.4 88 12 22 ];
+        %tmp.4 = lgetv %level;
+        symbol [ level %tmp.4 88 26 31 ];
+        %tmp.5 = lgetv %blockWidth.1;
+        symbol [ blockWidth %tmp.5 88 34 44 ];
+        %tmp.6 = mul %tmp.4 %tmp.5;
+        %tmp.7 = lgetv %level;
+        symbol [ level %tmp.7 88 50 55 ];
+        %tmp.8 = 1;
+        %tmp.9 = sub %tmp.7 %tmp.8;
+        %tmp.10 = lgetv %gap.3;
+        symbol [ gap %tmp.10 88 63 66 ];
+        %tmp.11 = mul %tmp.9 %tmp.10;
+        %tmp.12 = add %tmp.6 %tmp.11;
+        lputv %totalWidth.4 %tmp.12;
+        symbol [ totalWidth %totalWidth.4 88 12 22 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 89 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_79_38_99_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_79_38_99_4_stop" ]
+        %startX.5 = local;
+        symbol [ startX %startX.5 89 12 18 ];
+        symbol [ centerX %tmp.14 89 21 28 ];
+        %tmp.14 = getv ? :centerX;
+        %tmp.15 = lgetv %totalWidth.4;
+        symbol [ totalWidth %tmp.15 89 32 42 ];
+        %tmp.16 = 2;
+        %tmp.17 = div %tmp.15 %tmp.16;
+        %tmp.18 = sub %tmp.14 %tmp.17;
+        lputv %startX.5 %tmp.18;
+        symbol [ startX %startX.5 89 12 18 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 90 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_79_38_99_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_79_38_99_4_stop" ]
+        %startY.6 = local;
+        symbol [ startY %startY.6 90 12 18 ];
+        symbol [ centerY %tmp.20 90 21 28 ];
+        %tmp.20 = getv ? :centerY;
+        %tmp.21 = 55;
+        %tmp.22 = add %tmp.20 %tmp.21;
+        lputv %startY.6 %tmp.22;
+        symbol [ startY %startY.6 90 12 18 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 92 8 ]
+        %tmp.23 = lgetv %dc;
+        symbol [ dc %tmp.23 92 8 10 ];
+        symbol [ setColor %tmp.24 92 11 19 ];
+        %tmp.24 = getv function %tmp.23 :setColor;
+        symbol [ Graphics %tmp.25 92 20 28 ];
+        %tmp.25 = getm $.Toybox.Graphics;
+        symbol [ COLOR_RED %tmp.26 92 29 38 ];
+        %tmp.26 = getv %tmp.25 :COLOR_RED;
+        symbol [ Graphics %tmp.27 92 40 48 ];
+        %tmp.27 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.28 92 49 66 ];
+        %tmp.28 = getv %tmp.27 :COLOR_TRANSPARENT;
+        invoke %tmp.23 %tmp.24(%tmp.26, %tmp.28);
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 94 8 ]
+        for @C__GitHub_MondaineFace_source_MondaineFaceView_mc_94_8_98_8_for_test @C__GitHub_MondaineFace_source_MondaineFaceView_mc_94_8_98_8_for_incr @C__GitHub_MondaineFace_source_MondaineFaceView_mc_94_8_98_8_for_end;
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_94_8_98_8_for_init:
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_94_8_98_8_for_begin" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_94_8_98_8_for_end" ]
+        %i.7 = local;
+        symbol [ i %i.7 94 17 18 ];
+        %tmp.29 = 0;
+        lputv %i.7 %tmp.29;
+        symbol [ i %i.7 94 17 18 ];
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_94_8_98_8_for_test:
+        %tmp.30 = lgetv %i.7;
+        symbol [ i %tmp.30 94 24 25 ];
+        %tmp.31 = lgetv %level;
+        symbol [ level %tmp.31 94 28 33 ];
+        %tmp.32 = lt %tmp.30 %tmp.31;
+        bf %tmp.32 @C__GitHub_MondaineFace_source_MondaineFaceView_mc_94_8_98_8_for_end;
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_94_8_98_8_for_begin:
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_94_40_98_8_start:
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 95 12 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_94_40_98_8_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_94_40_98_8_stop" ]
+        %x.8 = local;
+        symbol [ x %x.8 95 16 17 ];
+        %tmp.33 = lgetv %startX.5;
+        symbol [ startX %tmp.33 95 20 26 ];
+        %tmp.34 = lgetv %i.7;
+        symbol [ i %tmp.34 95 30 31 ];
+        %tmp.35 = lgetv %blockWidth.1;
+        symbol [ blockWidth %tmp.35 95 35 45 ];
+        %tmp.36 = lgetv %gap.3;
+        symbol [ gap %tmp.36 95 48 51 ];
+        %tmp.37 = add %tmp.35 %tmp.36;
+        %tmp.38 = mul %tmp.34 %tmp.37;
+        %tmp.39 = add %tmp.33 %tmp.38;
+        lputv %x.8 %tmp.39;
+        symbol [ x %x.8 95 16 17 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 97 12 ]
+        %tmp.40 = lgetv %dc;
+        symbol [ dc %tmp.40 97 12 14 ];
+        symbol [ fillRectangle %tmp.41 97 15 28 ];
+        %tmp.41 = getv function %tmp.40 :fillRectangle;
+        %tmp.42 = lgetv %x.8;
+        symbol [ x %tmp.42 97 29 30 ];
+        %tmp.43 = lgetv %startY.6;
+        symbol [ startY %tmp.43 97 32 38 ];
+        %tmp.44 = lgetv %blockWidth.1;
+        symbol [ blockWidth %tmp.44 97 40 50 ];
+        %tmp.45 = lgetv %blockHeight.2;
+        symbol [ blockHeight %tmp.45 97 52 63 ];
+        invoke %tmp.40 %tmp.41(%tmp.42, %tmp.43, %tmp.44, %tmp.45);
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_94_40_98_8_stop:
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_94_8_98_8_for_incr:
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 94 ]
+        %tmp.48 = lgetv %i.7;
+        symbol [ i %tmp.48 94 35 36 ];
+        %tmp.49 = add %tmp.48 1;
+        lputv %i.7 %tmp.49;
+        symbol [ i %i.7 94 35 36 ];
+        goto @C__GitHub_MondaineFace_source_MondaineFaceView_mc_94_8_98_8_for_test;
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_94_8_98_8_for_end:
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_79_38_99_4_stop:
+    }
+    [ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 101; @symbol_functiondef = [drawTicks,101,13,22]; @symbol_param<0> = [dc,101,23,25]; ]
+    function drawTicks(dc) {
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_101_27_130_4_start:
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 102 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_101_27_130_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_101_27_130_4_stop" ]
+        %radius.1 = local;
+        symbol [ radius %radius.1 102 12 18 ];
+        symbol [ screenWidth %tmp.2 102 22 33 ];
+        %tmp.2 = getv ? :screenWidth;
+        %tmp.3 = 2;
+        %tmp.4 = div %tmp.2 %tmp.3;
+        %tmp.5 = 15;
+        %tmp.6 = sub %tmp.4 %tmp.5;
+        lputv %radius.1 %tmp.6;
+        symbol [ radius %radius.1 102 12 18 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 103 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 103 8 10 ];
+        symbol [ setColor %tmp.8 103 11 19 ];
+        %tmp.8 = getv function %tmp.7 :setColor;
+        symbol [ Graphics %tmp.9 103 20 28 ];
+        %tmp.9 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.10 103 29 40 ];
+        %tmp.10 = getv %tmp.9 :COLOR_BLACK;
+        symbol [ Graphics %tmp.11 103 42 50 ];
+        %tmp.11 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.12 103 51 68 ];
+        %tmp.12 = getv %tmp.11 :COLOR_TRANSPARENT;
+        invoke %tmp.7 %tmp.8(%tmp.10, %tmp.12);
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 105 8 ]
+        for @C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_8_129_8_for_test @C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_8_129_8_for_incr @C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_8_129_8_for_end;
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_8_129_8_for_init:
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_8_129_8_for_begin" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_8_129_8_for_end" ]
+        %i.2 = local;
+        symbol [ i %i.2 105 17 18 ];
+        %tmp.13 = 0;
+        lputv %i.2 %tmp.13;
+        symbol [ i %i.2 105 17 18 ];
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_8_129_8_for_test:
+        %tmp.14 = lgetv %i.2;
+        symbol [ i %tmp.14 105 24 25 ];
+        %tmp.15 = 60;
+        %tmp.16 = lt %tmp.14 %tmp.15;
+        bf %tmp.16 @C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_8_129_8_for_end;
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_8_129_8_for_begin:
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_37_129_8_start:
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 106 12 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_37_129_8_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_37_129_8_stop" ]
+        %angle.3 = local;
+        symbol [ angle %angle.3 106 16 21 ];
+        %tmp.17 = lgetv %i.2;
+        symbol [ i %tmp.17 106 24 25 ];
+        %tmp.18 = 6;
+        %tmp.19 = mul %tmp.17 %tmp.18;
+        symbol [ Math %tmp.20 106 32 36 ];
+        %tmp.20 = getm $.Toybox.Math;
+        symbol [ PI %tmp.21 106 37 39 ];
+        %tmp.21 = getv %tmp.20 :PI;
+        %tmp.22 = mul %tmp.19 %tmp.21;
+        %tmp.23 = 180;
+        %tmp.24 = div %tmp.22 %tmp.23;
+        lputv %angle.3 %tmp.24;
+        symbol [ angle %angle.3 106 16 21 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 107 12 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_37_129_8_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_37_129_8_stop" ]
+        %cos.4 = local;
+        symbol [ cos %cos.4 107 16 19 ];
+        symbol [ Math %tmp.25 107 22 26 ];
+        %tmp.25 = getm $.Toybox.Math;
+        symbol [ cos %tmp.26 107 27 30 ];
+        %tmp.26 = getv function %tmp.25 :cos;
+        %tmp.27 = lgetv %angle.3;
+        symbol [ angle %tmp.27 107 31 36 ];
+        %tmp.28 = invoke %tmp.25 %tmp.26(%tmp.27);
+        lputv %cos.4 %tmp.28;
+        symbol [ cos %cos.4 107 16 19 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 108 12 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_37_129_8_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_37_129_8_stop" ]
+        %sin.5 = local;
+        symbol [ sin %sin.5 108 16 19 ];
+        symbol [ Math %tmp.29 108 22 26 ];
+        %tmp.29 = getm $.Toybox.Math;
+        symbol [ sin %tmp.30 108 27 30 ];
+        %tmp.30 = getv function %tmp.29 :sin;
+        %tmp.31 = lgetv %angle.3;
+        symbol [ angle %tmp.31 108 31 36 ];
+        %tmp.32 = invoke %tmp.29 %tmp.30(%tmp.31);
+        lputv %sin.5 %tmp.32;
+        symbol [ sin %sin.5 108 16 19 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 110 12 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_37_129_8_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_37_129_8_stop" ]
+        %x1.6 = local;
+        symbol [ x1 %x1.6 110 16 18 ];
+        symbol [ centerX %tmp.34 110 21 28 ];
+        %tmp.34 = getv ? :centerX;
+        %tmp.35 = lgetv %radius.1;
+        symbol [ radius %tmp.35 110 31 37 ];
+        %tmp.36 = lgetv %sin.5;
+        symbol [ sin %tmp.36 110 40 43 ];
+        %tmp.37 = mul %tmp.35 %tmp.36;
+        %tmp.38 = add %tmp.34 %tmp.37;
+        lputv %x1.6 %tmp.38;
+        symbol [ x1 %x1.6 110 16 18 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 111 12 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_37_129_8_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_37_129_8_stop" ]
+        %y1.7 = local;
+        symbol [ y1 %y1.7 111 16 18 ];
+        symbol [ centerY %tmp.40 111 21 28 ];
+        %tmp.40 = getv ? :centerY;
+        %tmp.41 = lgetv %radius.1;
+        symbol [ radius %tmp.41 111 31 37 ];
+        %tmp.42 = lgetv %cos.4;
+        symbol [ cos %tmp.42 111 40 43 ];
+        %tmp.43 = mul %tmp.41 %tmp.42;
+        %tmp.44 = sub %tmp.40 %tmp.43;
+        lputv %y1.7 %tmp.44;
+        symbol [ y1 %y1.7 111 16 18 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 113 12 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_37_129_8_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_37_129_8_stop" ]
+        %tickLength.8 = local;
+        symbol [ tickLength %tickLength.8 113 16 26 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 114 12 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_37_129_8_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_37_129_8_stop" ]
+        %tickWidth.9 = local;
+        symbol [ tickWidth %tickWidth.9 114 16 25 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 116 12 ]
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_116_12_122_12_if_stmt:
+        %tmp.45 = lgetv %i.2;
+        symbol [ i %tmp.45 116 16 17 ];
+        %tmp.46 = 5;
+        %tmp.47 = mod %tmp.45 %tmp.46;
+        %tmp.48 = 0;
+        %tmp.49 = eq %tmp.47 %tmp.48;
+        bf %tmp.49 @C__GitHub_MondaineFace_source_MondaineFaceView_mc_116_12_122_12_if_else_false;
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_116_12_122_12_if_true:
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_116_28_119_12_start:
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 117 16 ]
+        %tmp.50 = 35;
+        lputv %tickLength.8 %tmp.50;
+        symbol [ tickLength %tickLength.8 117 16 26 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 118 16 ]
+        %tmp.51 = 10;
+        lputv %tickWidth.9 %tmp.51;
+        symbol [ tickWidth %tickWidth.9 118 16 25 ];
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_116_28_119_12_stop:
+        goto @C__GitHub_MondaineFace_source_MondaineFaceView_mc_116_12_122_12_if_end;
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_116_12_122_12_if_else_false:
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_119_19_122_12_start:
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 120 16 ]
+        %tmp.52 = 15;
+        lputv %tickLength.8 %tmp.52;
+        symbol [ tickLength %tickLength.8 120 16 26 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 121 16 ]
+        %tmp.53 = 4;
+        lputv %tickWidth.9 %tmp.53;
+        symbol [ tickWidth %tickWidth.9 121 16 25 ];
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_119_19_122_12_stop:
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_116_12_122_12_if_end:
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 124 12 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_37_129_8_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_37_129_8_stop" ]
+        %x2.10 = local;
+        symbol [ x2 %x2.10 124 16 18 ];
+        symbol [ centerX %tmp.55 124 21 28 ];
+        %tmp.55 = getv ? :centerX;
+        %tmp.56 = lgetv %radius.1;
+        symbol [ radius %tmp.56 124 32 38 ];
+        %tmp.57 = lgetv %tickLength.8;
+        symbol [ tickLength %tmp.57 124 41 51 ];
+        %tmp.58 = sub %tmp.56 %tmp.57;
+        %tmp.59 = lgetv %sin.5;
+        symbol [ sin %tmp.59 124 55 58 ];
+        %tmp.60 = mul %tmp.58 %tmp.59;
+        %tmp.61 = add %tmp.55 %tmp.60;
+        lputv %x2.10 %tmp.61;
+        symbol [ x2 %x2.10 124 16 18 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 125 12 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_37_129_8_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_37_129_8_stop" ]
+        %y2.11 = local;
+        symbol [ y2 %y2.11 125 16 18 ];
+        symbol [ centerY %tmp.63 125 21 28 ];
+        %tmp.63 = getv ? :centerY;
+        %tmp.64 = lgetv %radius.1;
+        symbol [ radius %tmp.64 125 32 38 ];
+        %tmp.65 = lgetv %tickLength.8;
+        symbol [ tickLength %tmp.65 125 41 51 ];
+        %tmp.66 = sub %tmp.64 %tmp.65;
+        %tmp.67 = lgetv %cos.4;
+        symbol [ cos %tmp.67 125 55 58 ];
+        %tmp.68 = mul %tmp.66 %tmp.67;
+        %tmp.69 = sub %tmp.63 %tmp.68;
+        lputv %y2.11 %tmp.69;
+        symbol [ y2 %y2.11 125 16 18 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 127 12 ]
+        %tmp.70 = lgetv %dc;
+        symbol [ dc %tmp.70 127 12 14 ];
+        symbol [ setPenWidth %tmp.71 127 15 26 ];
+        %tmp.71 = getv function %tmp.70 :setPenWidth;
+        %tmp.72 = lgetv %tickWidth.9;
+        symbol [ tickWidth %tmp.72 127 27 36 ];
+        invoke %tmp.70 %tmp.71(%tmp.72);
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 128 12 ]
+        %tmp.73 = lgetv %dc;
+        symbol [ dc %tmp.73 128 12 14 ];
+        symbol [ drawLine %tmp.74 128 15 23 ];
+        %tmp.74 = getv function %tmp.73 :drawLine;
+        %tmp.75 = lgetv %x1.6;
+        symbol [ x1 %tmp.75 128 24 26 ];
+        %tmp.76 = lgetv %y1.7;
+        symbol [ y1 %tmp.76 128 28 30 ];
+        %tmp.77 = lgetv %x2.10;
+        symbol [ x2 %tmp.77 128 32 34 ];
+        %tmp.78 = lgetv %y2.11;
+        symbol [ y2 %tmp.78 128 36 38 ];
+        invoke %tmp.73 %tmp.74(%tmp.75, %tmp.76, %tmp.77, %tmp.78);
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_37_129_8_stop:
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_8_129_8_for_incr:
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 105 ]
+        %tmp.81 = lgetv %i.2;
+        symbol [ i %tmp.81 105 32 33 ];
+        %tmp.82 = add %tmp.81 1;
+        lputv %i.2 %tmp.82;
+        symbol [ i %i.2 105 32 33 ];
+        goto @C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_8_129_8_for_test;
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_105_8_129_8_for_end:
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_101_27_130_4_stop:
+    }
+    [ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 132; @symbol_functiondef = [drawHourHand,132,13,25]; @symbol_param<0> = [dc,132,26,28]; @symbol_param<1> = [angleDeg,132,30,38]; @symbol_param<2> = [lengthPercent,132,40,53]; @symbol_param<3> = [width,132,55,60]; @symbol_param<4> = [color,132,62,67]; ]
+    function drawHourHand(dc, angleDeg, lengthPercent, width, color) {
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_132_69_146_4_start:
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 133 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_132_69_146_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_132_69_146_4_stop" ]
+        %angleRad.1 = local;
+        symbol [ angleRad %angleRad.1 133 12 20 ];
+        %tmp.1 = lgetv %angleDeg;
+        symbol [ angleDeg %tmp.1 133 23 31 ];
+        symbol [ Math %tmp.2 133 34 38 ];
+        %tmp.2 = getm $.Toybox.Math;
+        symbol [ PI %tmp.3 133 39 41 ];
+        %tmp.3 = getv %tmp.2 :PI;
+        %tmp.4 = mul %tmp.1 %tmp.3;
+        %tmp.5 = 180;
+        %tmp.6 = div %tmp.4 %tmp.5;
+        lputv %angleRad.1 %tmp.6;
+        symbol [ angleRad %angleRad.1 133 12 20 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 134 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_132_69_146_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_132_69_146_4_stop" ]
+        %handLen.2 = local;
+        symbol [ handLen %handLen.2 134 12 19 ];
+        symbol [ screenWidth %tmp.8 134 23 34 ];
+        %tmp.8 = getv ? :screenWidth;
+        %tmp.9 = 2;
+        %tmp.10 = div %tmp.8 %tmp.9;
+        %tmp.11 = lgetv %lengthPercent;
+        symbol [ lengthPercent %tmp.11 134 43 56 ];
+        %tmp.12 = 100.0;
+        %tmp.13 = div %tmp.11 %tmp.12;
+        %tmp.14 = mul %tmp.10 %tmp.13;
+        lputv %handLen.2 %tmp.14;
+        symbol [ handLen %handLen.2 134 12 19 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 135 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_132_69_146_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_132_69_146_4_stop" ]
+        %tailLen.3 = local;
+        symbol [ tailLen %tailLen.3 135 12 19 ];
+        %tmp.15 = 15;
+        lputv %tailLen.3 %tmp.15;
+        symbol [ tailLen %tailLen.3 135 12 19 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 137 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_132_69_146_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_132_69_146_4_stop" ]
+        %x1.4 = local;
+        symbol [ x1 %x1.4 137 12 14 ];
+        symbol [ centerX %tmp.17 137 17 24 ];
+        %tmp.17 = getv ? :centerX;
+        %tmp.18 = lgetv %handLen.2;
+        symbol [ handLen %tmp.18 137 27 34 ];
+        symbol [ Math %tmp.19 137 37 41 ];
+        %tmp.19 = getm $.Toybox.Math;
+        symbol [ sin %tmp.20 137 42 45 ];
+        %tmp.20 = getv function %tmp.19 :sin;
+        %tmp.21 = lgetv %angleRad.1;
+        symbol [ angleRad %tmp.21 137 46 54 ];
+        %tmp.22 = invoke %tmp.19 %tmp.20(%tmp.21);
+        %tmp.23 = mul %tmp.18 %tmp.22;
+        %tmp.24 = add %tmp.17 %tmp.23;
+        lputv %x1.4 %tmp.24;
+        symbol [ x1 %x1.4 137 12 14 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 138 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_132_69_146_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_132_69_146_4_stop" ]
+        %y1.5 = local;
+        symbol [ y1 %y1.5 138 12 14 ];
+        symbol [ centerY %tmp.26 138 17 24 ];
+        %tmp.26 = getv ? :centerY;
+        %tmp.27 = lgetv %handLen.2;
+        symbol [ handLen %tmp.27 138 27 34 ];
+        symbol [ Math %tmp.28 138 37 41 ];
+        %tmp.28 = getm $.Toybox.Math;
+        symbol [ cos %tmp.29 138 42 45 ];
+        %tmp.29 = getv function %tmp.28 :cos;
+        %tmp.30 = lgetv %angleRad.1;
+        symbol [ angleRad %tmp.30 138 46 54 ];
+        %tmp.31 = invoke %tmp.28 %tmp.29(%tmp.30);
+        %tmp.32 = mul %tmp.27 %tmp.31;
+        %tmp.33 = sub %tmp.26 %tmp.32;
+        lputv %y1.5 %tmp.33;
+        symbol [ y1 %y1.5 138 12 14 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 139 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_132_69_146_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_132_69_146_4_stop" ]
+        %x2.6 = local;
+        symbol [ x2 %x2.6 139 12 14 ];
+        symbol [ centerX %tmp.35 139 17 24 ];
+        %tmp.35 = getv ? :centerX;
+        %tmp.36 = lgetv %tailLen.3;
+        symbol [ tailLen %tmp.36 139 27 34 ];
+        symbol [ Math %tmp.37 139 37 41 ];
+        %tmp.37 = getm $.Toybox.Math;
+        symbol [ sin %tmp.38 139 42 45 ];
+        %tmp.38 = getv function %tmp.37 :sin;
+        %tmp.39 = lgetv %angleRad.1;
+        symbol [ angleRad %tmp.39 139 46 54 ];
+        %tmp.40 = invoke %tmp.37 %tmp.38(%tmp.39);
+        %tmp.41 = mul %tmp.36 %tmp.40;
+        %tmp.42 = sub %tmp.35 %tmp.41;
+        lputv %x2.6 %tmp.42;
+        symbol [ x2 %x2.6 139 12 14 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 140 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_132_69_146_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_132_69_146_4_stop" ]
+        %y2.7 = local;
+        symbol [ y2 %y2.7 140 12 14 ];
+        symbol [ centerY %tmp.44 140 17 24 ];
+        %tmp.44 = getv ? :centerY;
+        %tmp.45 = lgetv %tailLen.3;
+        symbol [ tailLen %tmp.45 140 27 34 ];
+        symbol [ Math %tmp.46 140 37 41 ];
+        %tmp.46 = getm $.Toybox.Math;
+        symbol [ cos %tmp.47 140 42 45 ];
+        %tmp.47 = getv function %tmp.46 :cos;
+        %tmp.48 = lgetv %angleRad.1;
+        symbol [ angleRad %tmp.48 140 46 54 ];
+        %tmp.49 = invoke %tmp.46 %tmp.47(%tmp.48);
+        %tmp.50 = mul %tmp.45 %tmp.49;
+        %tmp.51 = add %tmp.44 %tmp.50;
+        lputv %y2.7 %tmp.51;
+        symbol [ y2 %y2.7 140 12 14 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 142 8 ]
+        %tmp.52 = lgetv %dc;
+        symbol [ dc %tmp.52 142 8 10 ];
+        symbol [ setColor %tmp.53 142 11 19 ];
+        %tmp.53 = getv function %tmp.52 :setColor;
+        %tmp.54 = lgetv %color;
+        symbol [ color %tmp.54 142 20 25 ];
+        symbol [ Graphics %tmp.55 142 27 35 ];
+        %tmp.55 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.56 142 36 53 ];
+        %tmp.56 = getv %tmp.55 :COLOR_TRANSPARENT;
+        invoke %tmp.52 %tmp.53(%tmp.54, %tmp.56);
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 143 8 ]
+        %tmp.57 = lgetv %dc;
+        symbol [ dc %tmp.57 143 8 10 ];
+        symbol [ setPenWidth %tmp.58 143 11 22 ];
+        %tmp.58 = getv function %tmp.57 :setPenWidth;
+        %tmp.59 = lgetv %width;
+        symbol [ width %tmp.59 143 23 28 ];
+        invoke %tmp.57 %tmp.58(%tmp.59);
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 144 8 ]
+        %tmp.60 = lgetv %dc;
+        symbol [ dc %tmp.60 144 8 10 ];
+        symbol [ drawLine %tmp.61 144 11 19 ];
+        %tmp.61 = getv function %tmp.60 :drawLine;
+        %tmp.62 = lgetv %x2.6;
+        symbol [ x2 %tmp.62 144 20 22 ];
+        %tmp.63 = lgetv %y2.7;
+        symbol [ y2 %tmp.63 144 24 26 ];
+        %tmp.64 = lgetv %x1.4;
+        symbol [ x1 %tmp.64 144 28 30 ];
+        %tmp.65 = lgetv %y1.5;
+        symbol [ y1 %tmp.65 144 32 34 ];
+        invoke %tmp.60 %tmp.61(%tmp.62, %tmp.63, %tmp.64, %tmp.65);
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 145 8 ]
+        %tmp.66 = lgetv %dc;
+        symbol [ dc %tmp.66 145 8 10 ];
+        symbol [ fillCircle %tmp.67 145 11 21 ];
+        %tmp.67 = getv function %tmp.66 :fillCircle;
+        symbol [ centerX %tmp.69 145 22 29 ];
+        %tmp.69 = getv ? :centerX;
+        symbol [ centerY %tmp.71 145 31 38 ];
+        %tmp.71 = getv ? :centerY;
+        %tmp.72 = lgetv %width;
+        symbol [ width %tmp.72 145 40 45 ];
+        %tmp.73 = 2;
+        %tmp.74 = div %tmp.72 %tmp.73;
+        invoke %tmp.66 %tmp.67(%tmp.69, %tmp.71, %tmp.74);
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_132_69_146_4_stop:
+    }
+    [ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 148; @symbol_functiondef = [drawMinuteHand,148,13,27]; @symbol_param<0> = [dc,148,28,30]; @symbol_param<1> = [angleDeg,148,32,40]; @symbol_param<2> = [lengthPercent,148,42,55]; @symbol_param<3> = [width,148,57,62]; @symbol_param<4> = [color,148,64,69]; ]
+    function drawMinuteHand(dc, angleDeg, lengthPercent, width, color) {
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_148_71_162_4_start:
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 149 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_148_71_162_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_148_71_162_4_stop" ]
+        %angleRad.1 = local;
+        symbol [ angleRad %angleRad.1 149 12 20 ];
+        %tmp.1 = lgetv %angleDeg;
+        symbol [ angleDeg %tmp.1 149 23 31 ];
+        symbol [ Math %tmp.2 149 34 38 ];
+        %tmp.2 = getm $.Toybox.Math;
+        symbol [ PI %tmp.3 149 39 41 ];
+        %tmp.3 = getv %tmp.2 :PI;
+        %tmp.4 = mul %tmp.1 %tmp.3;
+        %tmp.5 = 180;
+        %tmp.6 = div %tmp.4 %tmp.5;
+        lputv %angleRad.1 %tmp.6;
+        symbol [ angleRad %angleRad.1 149 12 20 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 150 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_148_71_162_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_148_71_162_4_stop" ]
+        %handLen.2 = local;
+        symbol [ handLen %handLen.2 150 12 19 ];
+        symbol [ screenWidth %tmp.8 150 23 34 ];
+        %tmp.8 = getv ? :screenWidth;
+        %tmp.9 = 2;
+        %tmp.10 = div %tmp.8 %tmp.9;
+        %tmp.11 = lgetv %lengthPercent;
+        symbol [ lengthPercent %tmp.11 150 43 56 ];
+        %tmp.12 = 100.0;
+        %tmp.13 = div %tmp.11 %tmp.12;
+        %tmp.14 = mul %tmp.10 %tmp.13;
+        lputv %handLen.2 %tmp.14;
+        symbol [ handLen %handLen.2 150 12 19 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 151 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_148_71_162_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_148_71_162_4_stop" ]
+        %tailLen.3 = local;
+        symbol [ tailLen %tailLen.3 151 12 19 ];
+        %tmp.15 = 15;
+        lputv %tailLen.3 %tmp.15;
+        symbol [ tailLen %tailLen.3 151 12 19 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 153 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_148_71_162_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_148_71_162_4_stop" ]
+        %x1.4 = local;
+        symbol [ x1 %x1.4 153 12 14 ];
+        symbol [ centerX %tmp.17 153 17 24 ];
+        %tmp.17 = getv ? :centerX;
+        %tmp.18 = lgetv %handLen.2;
+        symbol [ handLen %tmp.18 153 27 34 ];
+        symbol [ Math %tmp.19 153 37 41 ];
+        %tmp.19 = getm $.Toybox.Math;
+        symbol [ sin %tmp.20 153 42 45 ];
+        %tmp.20 = getv function %tmp.19 :sin;
+        %tmp.21 = lgetv %angleRad.1;
+        symbol [ angleRad %tmp.21 153 46 54 ];
+        %tmp.22 = invoke %tmp.19 %tmp.20(%tmp.21);
+        %tmp.23 = mul %tmp.18 %tmp.22;
+        %tmp.24 = add %tmp.17 %tmp.23;
+        lputv %x1.4 %tmp.24;
+        symbol [ x1 %x1.4 153 12 14 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 154 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_148_71_162_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_148_71_162_4_stop" ]
+        %y1.5 = local;
+        symbol [ y1 %y1.5 154 12 14 ];
+        symbol [ centerY %tmp.26 154 17 24 ];
+        %tmp.26 = getv ? :centerY;
+        %tmp.27 = lgetv %handLen.2;
+        symbol [ handLen %tmp.27 154 27 34 ];
+        symbol [ Math %tmp.28 154 37 41 ];
+        %tmp.28 = getm $.Toybox.Math;
+        symbol [ cos %tmp.29 154 42 45 ];
+        %tmp.29 = getv function %tmp.28 :cos;
+        %tmp.30 = lgetv %angleRad.1;
+        symbol [ angleRad %tmp.30 154 46 54 ];
+        %tmp.31 = invoke %tmp.28 %tmp.29(%tmp.30);
+        %tmp.32 = mul %tmp.27 %tmp.31;
+        %tmp.33 = sub %tmp.26 %tmp.32;
+        lputv %y1.5 %tmp.33;
+        symbol [ y1 %y1.5 154 12 14 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 155 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_148_71_162_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_148_71_162_4_stop" ]
+        %x2.6 = local;
+        symbol [ x2 %x2.6 155 12 14 ];
+        symbol [ centerX %tmp.35 155 17 24 ];
+        %tmp.35 = getv ? :centerX;
+        %tmp.36 = lgetv %tailLen.3;
+        symbol [ tailLen %tmp.36 155 27 34 ];
+        symbol [ Math %tmp.37 155 37 41 ];
+        %tmp.37 = getm $.Toybox.Math;
+        symbol [ sin %tmp.38 155 42 45 ];
+        %tmp.38 = getv function %tmp.37 :sin;
+        %tmp.39 = lgetv %angleRad.1;
+        symbol [ angleRad %tmp.39 155 46 54 ];
+        %tmp.40 = invoke %tmp.37 %tmp.38(%tmp.39);
+        %tmp.41 = mul %tmp.36 %tmp.40;
+        %tmp.42 = sub %tmp.35 %tmp.41;
+        lputv %x2.6 %tmp.42;
+        symbol [ x2 %x2.6 155 12 14 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 156 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_148_71_162_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_148_71_162_4_stop" ]
+        %y2.7 = local;
+        symbol [ y2 %y2.7 156 12 14 ];
+        symbol [ centerY %tmp.44 156 17 24 ];
+        %tmp.44 = getv ? :centerY;
+        %tmp.45 = lgetv %tailLen.3;
+        symbol [ tailLen %tmp.45 156 27 34 ];
+        symbol [ Math %tmp.46 156 37 41 ];
+        %tmp.46 = getm $.Toybox.Math;
+        symbol [ cos %tmp.47 156 42 45 ];
+        %tmp.47 = getv function %tmp.46 :cos;
+        %tmp.48 = lgetv %angleRad.1;
+        symbol [ angleRad %tmp.48 156 46 54 ];
+        %tmp.49 = invoke %tmp.46 %tmp.47(%tmp.48);
+        %tmp.50 = mul %tmp.45 %tmp.49;
+        %tmp.51 = add %tmp.44 %tmp.50;
+        lputv %y2.7 %tmp.51;
+        symbol [ y2 %y2.7 156 12 14 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 158 8 ]
+        %tmp.52 = lgetv %dc;
+        symbol [ dc %tmp.52 158 8 10 ];
+        symbol [ setColor %tmp.53 158 11 19 ];
+        %tmp.53 = getv function %tmp.52 :setColor;
+        %tmp.54 = lgetv %color;
+        symbol [ color %tmp.54 158 20 25 ];
+        symbol [ Graphics %tmp.55 158 27 35 ];
+        %tmp.55 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.56 158 36 53 ];
+        %tmp.56 = getv %tmp.55 :COLOR_TRANSPARENT;
+        invoke %tmp.52 %tmp.53(%tmp.54, %tmp.56);
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 159 8 ]
+        %tmp.57 = lgetv %dc;
+        symbol [ dc %tmp.57 159 8 10 ];
+        symbol [ setPenWidth %tmp.58 159 11 22 ];
+        %tmp.58 = getv function %tmp.57 :setPenWidth;
+        %tmp.59 = lgetv %width;
+        symbol [ width %tmp.59 159 23 28 ];
+        invoke %tmp.57 %tmp.58(%tmp.59);
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 160 8 ]
+        %tmp.60 = lgetv %dc;
+        symbol [ dc %tmp.60 160 8 10 ];
+        symbol [ drawLine %tmp.61 160 11 19 ];
+        %tmp.61 = getv function %tmp.60 :drawLine;
+        %tmp.62 = lgetv %x2.6;
+        symbol [ x2 %tmp.62 160 20 22 ];
+        %tmp.63 = lgetv %y2.7;
+        symbol [ y2 %tmp.63 160 24 26 ];
+        %tmp.64 = lgetv %x1.4;
+        symbol [ x1 %tmp.64 160 28 30 ];
+        %tmp.65 = lgetv %y1.5;
+        symbol [ y1 %tmp.65 160 32 34 ];
+        invoke %tmp.60 %tmp.61(%tmp.62, %tmp.63, %tmp.64, %tmp.65);
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 161 8 ]
+        %tmp.66 = lgetv %dc;
+        symbol [ dc %tmp.66 161 8 10 ];
+        symbol [ fillCircle %tmp.67 161 11 21 ];
+        %tmp.67 = getv function %tmp.66 :fillCircle;
+        symbol [ centerX %tmp.69 161 22 29 ];
+        %tmp.69 = getv ? :centerX;
+        symbol [ centerY %tmp.71 161 31 38 ];
+        %tmp.71 = getv ? :centerY;
+        %tmp.72 = lgetv %width;
+        symbol [ width %tmp.72 161 40 45 ];
+        %tmp.73 = 2;
+        %tmp.74 = div %tmp.72 %tmp.73;
+        invoke %tmp.66 %tmp.67(%tmp.69, %tmp.71, %tmp.74);
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_148_71_162_4_stop:
+    }
+    [ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 164; @symbol_functiondef = [drawSecondHand,164,13,27]; @symbol_param<0> = [dc,164,28,30]; @symbol_param<1> = [angleDeg,164,32,40]; ]
+    function drawSecondHand(dc, angleDeg) {
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_start:
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 165 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_stop" ]
+        %angleRad.1 = local;
+        symbol [ angleRad %angleRad.1 165 12 20 ];
+        %tmp.1 = lgetv %angleDeg;
+        symbol [ angleDeg %tmp.1 165 23 31 ];
+        symbol [ Math %tmp.2 165 34 38 ];
+        %tmp.2 = getm $.Toybox.Math;
+        symbol [ PI %tmp.3 165 39 41 ];
+        %tmp.3 = getv %tmp.2 :PI;
+        %tmp.4 = mul %tmp.1 %tmp.3;
+        %tmp.5 = 180;
+        %tmp.6 = div %tmp.4 %tmp.5;
+        lputv %angleRad.1 %tmp.6;
+        symbol [ angleRad %angleRad.1 165 12 20 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 166 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_stop" ]
+        %handLen.2 = local;
+        symbol [ handLen %handLen.2 166 12 19 ];
+        symbol [ screenWidth %tmp.8 166 23 34 ];
+        %tmp.8 = getv ? :screenWidth;
+        %tmp.9 = 2;
+        %tmp.10 = div %tmp.8 %tmp.9;
+        %tmp.11 = 0.70;
+        %tmp.12 = mul %tmp.10 %tmp.11;
+        lputv %handLen.2 %tmp.12;
+        symbol [ handLen %handLen.2 166 12 19 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 167 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_stop" ]
+        %tailLen.3 = local;
+        symbol [ tailLen %tailLen.3 167 12 19 ];
+        %tmp.13 = 40;
+        lputv %tailLen.3 %tmp.13;
+        symbol [ tailLen %tailLen.3 167 12 19 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 169 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_stop" ]
+        %xStart.4 = local;
+        symbol [ xStart %xStart.4 169 12 18 ];
+        symbol [ centerX %tmp.15 169 21 28 ];
+        %tmp.15 = getv ? :centerX;
+        %tmp.16 = lgetv %tailLen.3;
+        symbol [ tailLen %tmp.16 169 31 38 ];
+        symbol [ Math %tmp.17 169 41 45 ];
+        %tmp.17 = getm $.Toybox.Math;
+        symbol [ sin %tmp.18 169 46 49 ];
+        %tmp.18 = getv function %tmp.17 :sin;
+        %tmp.19 = lgetv %angleRad.1;
+        symbol [ angleRad %tmp.19 169 50 58 ];
+        %tmp.20 = invoke %tmp.17 %tmp.18(%tmp.19);
+        %tmp.21 = mul %tmp.16 %tmp.20;
+        %tmp.22 = sub %tmp.15 %tmp.21;
+        lputv %xStart.4 %tmp.22;
+        symbol [ xStart %xStart.4 169 12 18 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 170 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_stop" ]
+        %yStart.5 = local;
+        symbol [ yStart %yStart.5 170 12 18 ];
+        symbol [ centerY %tmp.24 170 21 28 ];
+        %tmp.24 = getv ? :centerY;
+        %tmp.25 = lgetv %tailLen.3;
+        symbol [ tailLen %tmp.25 170 31 38 ];
+        symbol [ Math %tmp.26 170 41 45 ];
+        %tmp.26 = getm $.Toybox.Math;
+        symbol [ cos %tmp.27 170 46 49 ];
+        %tmp.27 = getv function %tmp.26 :cos;
+        %tmp.28 = lgetv %angleRad.1;
+        symbol [ angleRad %tmp.28 170 50 58 ];
+        %tmp.29 = invoke %tmp.26 %tmp.27(%tmp.28);
+        %tmp.30 = mul %tmp.25 %tmp.29;
+        %tmp.31 = add %tmp.24 %tmp.30;
+        lputv %yStart.5 %tmp.31;
+        symbol [ yStart %yStart.5 170 12 18 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 171 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_stop" ]
+        %xEnd.6 = local;
+        symbol [ xEnd %xEnd.6 171 12 16 ];
+        symbol [ centerX %tmp.33 171 19 26 ];
+        %tmp.33 = getv ? :centerX;
+        %tmp.34 = lgetv %handLen.2;
+        symbol [ handLen %tmp.34 171 29 36 ];
+        symbol [ Math %tmp.35 171 39 43 ];
+        %tmp.35 = getm $.Toybox.Math;
+        symbol [ sin %tmp.36 171 44 47 ];
+        %tmp.36 = getv function %tmp.35 :sin;
+        %tmp.37 = lgetv %angleRad.1;
+        symbol [ angleRad %tmp.37 171 48 56 ];
+        %tmp.38 = invoke %tmp.35 %tmp.36(%tmp.37);
+        %tmp.39 = mul %tmp.34 %tmp.38;
+        %tmp.40 = add %tmp.33 %tmp.39;
+        lputv %xEnd.6 %tmp.40;
+        symbol [ xEnd %xEnd.6 171 12 16 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 172 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_stop" ]
+        %yEnd.7 = local;
+        symbol [ yEnd %yEnd.7 172 12 16 ];
+        symbol [ centerY %tmp.42 172 19 26 ];
+        %tmp.42 = getv ? :centerY;
+        %tmp.43 = lgetv %handLen.2;
+        symbol [ handLen %tmp.43 172 29 36 ];
+        symbol [ Math %tmp.44 172 39 43 ];
+        %tmp.44 = getm $.Toybox.Math;
+        symbol [ cos %tmp.45 172 44 47 ];
+        %tmp.45 = getv function %tmp.44 :cos;
+        %tmp.46 = lgetv %angleRad.1;
+        symbol [ angleRad %tmp.46 172 48 56 ];
+        %tmp.47 = invoke %tmp.44 %tmp.45(%tmp.46);
+        %tmp.48 = mul %tmp.43 %tmp.47;
+        %tmp.49 = sub %tmp.42 %tmp.48;
+        lputv %yEnd.7 %tmp.49;
+        symbol [ yEnd %yEnd.7 172 12 16 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 174 8 ]
+        %tmp.50 = lgetv %dc;
+        symbol [ dc %tmp.50 174 8 10 ];
+        symbol [ setColor %tmp.51 174 11 19 ];
+        %tmp.51 = getv function %tmp.50 :setColor;
+        symbol [ Graphics %tmp.52 174 20 28 ];
+        %tmp.52 = getm $.Toybox.Graphics;
+        symbol [ COLOR_RED %tmp.53 174 29 38 ];
+        %tmp.53 = getv %tmp.52 :COLOR_RED;
+        symbol [ Graphics %tmp.54 174 40 48 ];
+        %tmp.54 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.55 174 49 66 ];
+        %tmp.55 = getv %tmp.54 :COLOR_TRANSPARENT;
+        invoke %tmp.50 %tmp.51(%tmp.53, %tmp.55);
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 176 8 ]
+        %tmp.56 = lgetv %dc;
+        symbol [ dc %tmp.56 176 8 10 ];
+        symbol [ setPenWidth %tmp.57 176 11 22 ];
+        %tmp.57 = getv function %tmp.56 :setPenWidth;
+        %tmp.58 = 5;
+        invoke %tmp.56 %tmp.57(%tmp.58);
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 177 8 ]
+        %tmp.59 = lgetv %dc;
+        symbol [ dc %tmp.59 177 8 10 ];
+        symbol [ drawLine %tmp.60 177 11 19 ];
+        %tmp.60 = getv function %tmp.59 :drawLine;
+        %tmp.61 = lgetv %xStart.4;
+        symbol [ xStart %tmp.61 177 20 26 ];
+        %tmp.62 = lgetv %yStart.5;
+        symbol [ yStart %tmp.62 177 28 34 ];
+        %tmp.63 = lgetv %xEnd.6;
+        symbol [ xEnd %tmp.63 177 36 40 ];
+        %tmp.64 = lgetv %yEnd.7;
+        symbol [ yEnd %tmp.64 177 42 46 ];
+        invoke %tmp.59 %tmp.60(%tmp.61, %tmp.62, %tmp.63, %tmp.64);
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 179 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_stop" ]
+        %circleRadius.8 = local;
+        symbol [ circleRadius %circleRadius.8 179 12 24 ];
+        %tmp.65 = 14;
+        lputv %circleRadius.8 %tmp.65;
+        symbol [ circleRadius %circleRadius.8 179 12 24 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 180 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_stop" ]
+        %paddleX.9 = local;
+        symbol [ paddleX %paddleX.9 180 12 19 ];
+        symbol [ centerX %tmp.67 180 22 29 ];
+        %tmp.67 = getv ? :centerX;
+        %tmp.68 = lgetv %handLen.2;
+        symbol [ handLen %tmp.68 180 33 40 ];
+        %tmp.69 = lgetv %circleRadius.8;
+        symbol [ circleRadius %tmp.69 180 43 55 ];
+        %tmp.70 = add %tmp.68 %tmp.69;
+        %tmp.71 = 4;
+        %tmp.72 = sub %tmp.70 %tmp.71;
+        symbol [ Math %tmp.73 180 63 67 ];
+        %tmp.73 = getm $.Toybox.Math;
+        symbol [ sin %tmp.74 180 68 71 ];
+        %tmp.74 = getv function %tmp.73 :sin;
+        %tmp.75 = lgetv %angleRad.1;
+        symbol [ angleRad %tmp.75 180 72 80 ];
+        %tmp.76 = invoke %tmp.73 %tmp.74(%tmp.75);
+        %tmp.77 = mul %tmp.72 %tmp.76;
+        %tmp.78 = add %tmp.67 %tmp.77;
+        lputv %paddleX.9 %tmp.78;
+        symbol [ paddleX %paddleX.9 180 12 19 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 181 8 ]
+        [ "C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_start" "C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_stop" ]
+        %paddleY.10 = local;
+        symbol [ paddleY %paddleY.10 181 12 19 ];
+        symbol [ centerY %tmp.80 181 22 29 ];
+        %tmp.80 = getv ? :centerY;
+        %tmp.81 = lgetv %handLen.2;
+        symbol [ handLen %tmp.81 181 33 40 ];
+        %tmp.82 = lgetv %circleRadius.8;
+        symbol [ circleRadius %tmp.82 181 43 55 ];
+        %tmp.83 = add %tmp.81 %tmp.82;
+        %tmp.84 = 4;
+        %tmp.85 = sub %tmp.83 %tmp.84;
+        symbol [ Math %tmp.86 181 63 67 ];
+        %tmp.86 = getm $.Toybox.Math;
+        symbol [ cos %tmp.87 181 68 71 ];
+        %tmp.87 = getv function %tmp.86 :cos;
+        %tmp.88 = lgetv %angleRad.1;
+        symbol [ angleRad %tmp.88 181 72 80 ];
+        %tmp.89 = invoke %tmp.86 %tmp.87(%tmp.88);
+        %tmp.90 = mul %tmp.85 %tmp.89;
+        %tmp.91 = sub %tmp.80 %tmp.90;
+        lputv %paddleY.10 %tmp.91;
+        symbol [ paddleY %paddleY.10 181 12 19 ];
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 183 8 ]
+        %tmp.92 = lgetv %dc;
+        symbol [ dc %tmp.92 183 8 10 ];
+        symbol [ fillCircle %tmp.93 183 11 21 ];
+        %tmp.93 = getv function %tmp.92 :fillCircle;
+        %tmp.94 = lgetv %paddleX.9;
+        symbol [ paddleX %tmp.94 183 22 29 ];
+        %tmp.95 = lgetv %paddleY.10;
+        symbol [ paddleY %tmp.95 183 31 38 ];
+        %tmp.96 = lgetv %circleRadius.8;
+        symbol [ circleRadius %tmp.96 183 40 52 ];
+        invoke %tmp.92 %tmp.93(%tmp.94, %tmp.95, %tmp.96);
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 184 8 ]
+        %tmp.97 = lgetv %dc;
+        symbol [ dc %tmp.97 184 8 10 ];
+        symbol [ fillCircle %tmp.98 184 11 21 ];
+        %tmp.98 = getv function %tmp.97 :fillCircle;
+        symbol [ centerX %tmp.100 184 22 29 ];
+        %tmp.100 = getv ? :centerX;
+        symbol [ centerY %tmp.102 184 31 38 ];
+        %tmp.102 = getv ? :centerY;
+        %tmp.103 = 6;
+        invoke %tmp.97 %tmp.98(%tmp.100, %tmp.102, %tmp.103);
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_164_42_185_4_stop:
+    }
+    [ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 187; @symbol_functiondef = [onExitSleep,187,13,24]; ]
+    function onExitSleep() {
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_187_27_190_4_start:
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 188 8 ]
+        %tmp.1 = true;
+        symbol [ isAwake ? 188 8 15 ];
+        putv self :isAwake %tmp.1;
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 189 8 ]
+        symbol [ WatchUi %tmp.2 189 8 15 ];
+        %tmp.2 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.3 189 16 29 ];
+        %tmp.3 = getv function %tmp.2 :requestUpdate;
+        invoke %tmp.2 %tmp.3();
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_187_27_190_4_stop:
+    }
+    [ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 192; @symbol_functiondef = [onEnterSleep,192,13,25]; ]
+    function onEnterSleep() {
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_192_28_195_4_start:
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 193 8 ]
+        %tmp.1 = false;
+        symbol [ isAwake ? 193 8 15 ];
+        putv self :isAwake %tmp.1;
+[ "C:\GitHub\MondaineFace\source\MondaineFaceView.mc" 194 8 ]
+        symbol [ WatchUi %tmp.2 194 8 15 ];
+        %tmp.2 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.3 194 16 29 ];
+        %tmp.3 = getv function %tmp.2 :requestUpdate;
+        invoke %tmp.2 %tmp.3();
+C__GitHub_MondaineFace_source_MondaineFaceView_mc_192_28_195_4_stop:
+    }
+}
+[ @file = "C:\GitHub\MondaineFace\source\MondaineFaceView.mc"; @line = 1; ]
+<init> {
+}

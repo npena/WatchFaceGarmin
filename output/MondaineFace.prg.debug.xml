@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="C:\GitHub\MondaineFace\manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceApp.mc" id="1" lineNum="5" parent="globals/MondaineFaceApp" pc="268435457" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceApp.mc" id="2" lineNum="26" parent="globals" pc="268435469" symbol="getApp"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceApp.mc" id="2" lineNum="27" parent="globals" pc="268435479" symbol="getApp"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="3" lineNum="10" parent="globals/MondaineFaceView" pc="268435490" symbol="&lt;init&gt;"/>
+        <entry filename="c:\\GitHub\\MondaineFace\\output\\gen\\006-B4432-00\\source\\Rez.mcgen" id="4" lineNum="7" parent="globals/Rez" pc="268435502" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceApp.mc" id="6" lineNum="20" parent="globals/MondaineFaceApp" pc="268435522" symbol="getInitialView"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceApp.mc" id="6" lineNum="21" parent="globals/MondaineFaceApp" pc="268435524" symbol="getInitialView"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceApp.mc" id="7" lineNum="7" parent="globals/MondaineFaceApp" pc="268435550" symbol="initialize"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceApp.mc" id="7" lineNum="8" parent="globals/MondaineFaceApp" pc="268435552" symbol="initialize"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="9" lineNum="172" parent="globals/MondaineFaceView" pc="268435565" symbol="onExitSleep"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="9" lineNum="173" parent="globals/MondaineFaceView" pc="268435567" symbol="onExitSleep"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="9" lineNum="174" parent="globals/MondaineFaceView" pc="268435575" symbol="onExitSleep"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="10" lineNum="133" parent="globals/MondaineFaceView" pc="268435587" symbol="drawHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="10" lineNum="134" parent="globals/MondaineFaceView" pc="268435590" symbol="drawHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="10" lineNum="135" parent="globals/MondaineFaceView" pc="268435604" symbol="drawHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="10" lineNum="136" parent="globals/MondaineFaceView" pc="268435623" symbol="drawHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="10" lineNum="138" parent="globals/MondaineFaceView" pc="268435627" symbol="drawHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="10" lineNum="139" parent="globals/MondaineFaceView" pc="268435652" symbol="drawHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="10" lineNum="140" parent="globals/MondaineFaceView" pc="268435677" symbol="drawHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="10" lineNum="141" parent="globals/MondaineFaceView" pc="268435702" symbol="drawHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="10" lineNum="143" parent="globals/MondaineFaceView" pc="268435727" symbol="drawHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="10" lineNum="144" parent="globals/MondaineFaceView" pc="268435741" symbol="drawHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="10" lineNum="145" parent="globals/MondaineFaceView" pc="268435753" symbol="drawHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="10" lineNum="146" parent="globals/MondaineFaceView" pc="268435771" symbol="drawHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="11" lineNum="22" parent="globals/MondaineFaceView" pc="268435797" symbol="onLayout"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="11" lineNum="23" parent="globals/MondaineFaceView" pc="268435799" symbol="onLayout"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="11" lineNum="24" parent="globals/MondaineFaceView" pc="268435813" symbol="onLayout"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="11" lineNum="25" parent="globals/MondaineFaceView" pc="268435827" symbol="onLayout"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="11" lineNum="26" parent="globals/MondaineFaceView" pc="268435842" symbol="onLayout"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="12" lineNum="72" parent="globals/MondaineFaceView" pc="268435858" symbol="drawBranding"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="12" lineNum="74" parent="globals/MondaineFaceView" pc="268435860" symbol="drawBranding"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="12" lineNum="75" parent="globals/MondaineFaceView" pc="268435873" symbol="drawBranding"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="12" lineNum="76" parent="globals/MondaineFaceView" pc="268435905" symbol="drawBranding"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="12" lineNum="77" parent="globals/MondaineFaceView" pc="268435922" symbol="drawBranding"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="13" lineNum="80" parent="globals/MondaineFaceView" pc="268435955" symbol="drawMoveAlert"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="13" lineNum="84" parent="globals/MondaineFaceView" pc="268435958" symbol="drawMoveAlert"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="13" lineNum="85" parent="globals/MondaineFaceView" pc="268435962" symbol="drawMoveAlert"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="13" lineNum="86" parent="globals/MondaineFaceView" pc="268435966" symbol="drawMoveAlert"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="13" lineNum="89" parent="globals/MondaineFaceView" pc="268435970" symbol="drawMoveAlert"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="13" lineNum="90" parent="globals/MondaineFaceView" pc="268435986" symbol="drawMoveAlert"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="13" lineNum="91" parent="globals/MondaineFaceView" pc="268435999" symbol="drawMoveAlert"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="13" lineNum="93" parent="globals/MondaineFaceView" pc="268436009" symbol="drawMoveAlert"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="13" lineNum="95" parent="globals/MondaineFaceView" pc="268436026" symbol="drawMoveAlert"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="13" lineNum="96" parent="globals/MondaineFaceView" pc="268436037" symbol="drawMoveAlert"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="13" lineNum="98" parent="globals/MondaineFaceView" pc="268436050" symbol="drawMoveAlert"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="14" lineNum="102" parent="globals/MondaineFaceView" pc="268436079" symbol="drawTicks"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="14" lineNum="103" parent="globals/MondaineFaceView" pc="268436082" symbol="drawTicks"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="14" lineNum="104" parent="globals/MondaineFaceView" pc="268436095" symbol="drawTicks"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="14" lineNum="106" parent="globals/MondaineFaceView" pc="268436108" symbol="drawTicks"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="14" lineNum="107" parent="globals/MondaineFaceView" pc="268436119" symbol="drawTicks"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="14" lineNum="108" parent="globals/MondaineFaceView" pc="268436136" symbol="drawTicks"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="14" lineNum="109" parent="globals/MondaineFaceView" pc="268436152" symbol="drawTicks"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="14" lineNum="111" parent="globals/MondaineFaceView" pc="268436168" symbol="drawTicks"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="14" lineNum="112" parent="globals/MondaineFaceView" pc="268436181" symbol="drawTicks"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="14" lineNum="117" parent="globals/MondaineFaceView" pc="268436194" symbol="drawTicks"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="14" lineNum="118" parent="globals/MondaineFaceView" pc="268436204" symbol="drawTicks"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="14" lineNum="119" parent="globals/MondaineFaceView" pc="268436208" symbol="drawTicks"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="14" lineNum="121" parent="globals/MondaineFaceView" pc="268436215" symbol="drawTicks"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="14" lineNum="122" parent="globals/MondaineFaceView" pc="268436219" symbol="drawTicks"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="14" lineNum="125" parent="globals/MondaineFaceView" pc="268436223" symbol="drawTicks"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="14" lineNum="126" parent="globals/MondaineFaceView" pc="268436239" symbol="drawTicks"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="14" lineNum="128" parent="globals/MondaineFaceView" pc="268436255" symbol="drawTicks"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="14" lineNum="129" parent="globals/MondaineFaceView" pc="268436267" symbol="drawTicks"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="15" lineNum="149" parent="globals/MondaineFaceView" pc="268436296" symbol="drawSecondHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="15" lineNum="150" parent="globals/MondaineFaceView" pc="268436299" symbol="drawSecondHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="15" lineNum="151" parent="globals/MondaineFaceView" pc="268436313" symbol="drawSecondHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="15" lineNum="152" parent="globals/MondaineFaceView" pc="268436329" symbol="drawSecondHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="15" lineNum="154" parent="globals/MondaineFaceView" pc="268436333" symbol="drawSecondHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="15" lineNum="155" parent="globals/MondaineFaceView" pc="268436358" symbol="drawSecondHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="15" lineNum="156" parent="globals/MondaineFaceView" pc="268436383" symbol="drawSecondHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="15" lineNum="157" parent="globals/MondaineFaceView" pc="268436408" symbol="drawSecondHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="15" lineNum="159" parent="globals/MondaineFaceView" pc="268436433" symbol="drawSecondHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="15" lineNum="161" parent="globals/MondaineFaceView" pc="268436450" symbol="drawSecondHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="15" lineNum="162" parent="globals/MondaineFaceView" pc="268436462" symbol="drawSecondHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="15" lineNum="164" parent="globals/MondaineFaceView" pc="268436480" symbol="drawSecondHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="15" lineNum="165" parent="globals/MondaineFaceView" pc="268436484" symbol="drawSecondHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="15" lineNum="166" parent="globals/MondaineFaceView" pc="268436515" symbol="drawSecondHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="15" lineNum="168" parent="globals/MondaineFaceView" pc="268436546" symbol="drawSecondHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="15" lineNum="169" parent="globals/MondaineFaceView" pc="268436562" symbol="drawSecondHand"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="16" lineNum="177" parent="globals/MondaineFaceView" pc="268436585" symbol="onEnterSleep"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="16" lineNum="178" parent="globals/MondaineFaceView" pc="268436587" symbol="onEnterSleep"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="16" lineNum="179" parent="globals/MondaineFaceView" pc="268436595" symbol="onEnterSleep"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="17" lineNum="18" parent="globals/MondaineFaceView" pc="268436607" symbol="initialize"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="17" lineNum="19" parent="globals/MondaineFaceView" pc="268436609" symbol="initialize"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="18" lineNum="29" parent="globals/MondaineFaceView" pc="268436622" symbol="onUpdate"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="18" lineNum="31" parent="globals/MondaineFaceView" pc="268436625" symbol="onUpdate"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="18" lineNum="32" parent="globals/MondaineFaceView" pc="268436645" symbol="onUpdate"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="18" lineNum="35" parent="globals/MondaineFaceView" pc="268436653" symbol="onUpdate"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="18" lineNum="42" parent="globals/MondaineFaceView" pc="268436664" symbol="onUpdate"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="18" lineNum="43" parent="globals/MondaineFaceView" pc="268436676" symbol="onUpdate"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="18" lineNum="44" parent="globals/MondaineFaceView" pc="268436697" symbol="onUpdate"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="18" lineNum="48" parent="globals/MondaineFaceView" pc="268436714" symbol="onUpdate"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="18" lineNum="49" parent="globals/MondaineFaceView" pc="268436726" symbol="onUpdate"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="18" lineNum="50" parent="globals/MondaineFaceView" pc="268436734" symbol="onUpdate"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="18" lineNum="51" parent="globals/MondaineFaceView" pc="268436742" symbol="onUpdate"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="18" lineNum="56" parent="globals/MondaineFaceView" pc="268436750" symbol="onUpdate"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="18" lineNum="57" parent="globals/MondaineFaceView" pc="268436769" symbol="onUpdate"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="18" lineNum="60" parent="globals/MondaineFaceView" pc="268436787" symbol="onUpdate"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="18" lineNum="61" parent="globals/MondaineFaceView" pc="268436794" symbol="onUpdate"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="18" lineNum="64" parent="globals/MondaineFaceView" pc="268436812" symbol="onUpdate"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="18" lineNum="65" parent="globals/MondaineFaceView" pc="268436820" symbol="onUpdate"/>
+        <entry filename="C:\\GitHub\\MondaineFace\\source\\MondaineFaceView.mc" id="18" lineNum="66" parent="globals/MondaineFaceView" pc="268436827" symbol="onUpdate"/>
+        <entry filename="c:\\GitHub\\MondaineFace\\output\\gen\\006-B4432-00\\source\\Rez.mcgen" id="19" lineNum="13" parent="globals/Rez/Layouts" pc="268436841" symbol="WatchFace"/>
+        <entry filename="c:\\GitHub\\MondaineFace\\output\\gen\\006-B4432-00\\source\\Rez.mcgen" id="19" lineNum="14" parent="globals/Rez/Layouts" pc="268436852" symbol="WatchFace"/>
+        <entry filename="c:\\GitHub\\MondaineFace\\output\\gen\\006-B4432-00\\source\\Rez.mcgen" id="19" lineNum="16" parent="globals/Rez/Layouts" pc="268436968" symbol="WatchFace"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="12" method="true" symbol="drawMoveAlert"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry field="true" id="8389671" symbol="screenWidth"/>
+        <entry id="7" object="true" symbol="MondaineFaceView"/>
+        <entry id="8388924" module="true" symbol="Gregorian"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="6" object="true" symbol="MondaineFaceApp"/>
+        <entry field="true" id="18" symbol="AppName"/>
+        <entry id="8388633" module="true" symbol="ActivityMonitor"/>
+        <entry id="5" module="true" symbol="globals/Rez/Strings"/>
+        <entry field="true" id="15" symbol="isAwake"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="10" method="true" symbol="drawBranding"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8389348" symbol="font"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry id="4" module="true" symbol="globals/Rez/Layouts"/>
+        <entry field="true" id="8389672" symbol="screenHeight"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry id="8389376" method="true" symbol="onEnterSleep"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="13" method="true" symbol="drawSecondHand"/>
+        <entry id="8389377" method="true" symbol="onExitSleep"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="8388645" module="true" symbol="Time"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry id="11" method="true" symbol="drawHand"/>
+        <entry field="true" id="17" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="14" method="true" symbol="drawTicks"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry field="true" id="9" symbol="centerY"/>
+        <entry field="true" id="8" symbol="centerX"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="8388641" module="true" symbol="Math"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry field="true" id="8389347" symbol="color"/>
+        <entry id="16" module="true" symbol="Layouts"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435796" name="dc" stackId="1" startPc="268435587"/>
+        <entry arg="true" endPc="268435796" name="angleDeg" stackId="2" startPc="268435587"/>
+        <entry arg="true" endPc="268435796" name="lengthPercent" stackId="3" startPc="268435587"/>
+        <entry arg="true" endPc="268435796" name="width" stackId="4" startPc="268435587"/>
+        <entry arg="true" endPc="268435796" name="color" stackId="5" startPc="268435587"/>
+        <entry endPc="268435795" name="angleRad" stackId="6" startPc="268435590"/>
+        <entry endPc="268435795" name="handLen" stackId="7" startPc="268435590"/>
+        <entry endPc="268435795" name="tailLen" stackId="8" startPc="268435590"/>
+        <entry endPc="268435795" name="x1" stackId="9" startPc="268435590"/>
+        <entry endPc="268435795" name="y1" stackId="10" startPc="268435590"/>
+        <entry endPc="268435795" name="x2" stackId="11" startPc="268435590"/>
+        <entry endPc="268435795" name="y2" stackId="12" startPc="268435590"/>
+        <entry arg="true" endPc="268435857" name="dc" stackId="1" startPc="268435797"/>
+        <entry arg="true" endPc="268435954" name="dc" stackId="1" startPc="268435858"/>
+        <entry arg="true" endPc="268436078" name="dc" stackId="1" startPc="268435955"/>
+        <entry arg="true" endPc="268436078" name="level" stackId="2" startPc="268435955"/>
+        <entry endPc="268436077" name="blockWidth" stackId="3" startPc="268435958"/>
+        <entry endPc="268436077" name="blockHeight" stackId="4" startPc="268435958"/>
+        <entry endPc="268436077" name="gap" stackId="5" startPc="268435958"/>
+        <entry endPc="268436077" name="totalWidth" stackId="6" startPc="268435958"/>
+        <entry endPc="268436077" name="startX" stackId="7" startPc="268435958"/>
+        <entry endPc="268436077" name="startY" stackId="8" startPc="268435958"/>
+        <entry endPc="268436077" name="i" stackId="9" startPc="268436037"/>
+        <entry endPc="268436067" name="x" stackId="10" startPc="268436037"/>
+        <entry arg="true" endPc="268436295" name="dc" stackId="1" startPc="268436079"/>
+        <entry endPc="268436294" name="radius" stackId="2" startPc="268436082"/>
+        <entry endPc="268436294" name="i" stackId="3" startPc="268436119"/>
+        <entry endPc="268436284" name="angle" stackId="4" startPc="268436119"/>
+        <entry endPc="268436284" name="cos" stackId="5" startPc="268436119"/>
+        <entry endPc="268436284" name="sin" stackId="6" startPc="268436119"/>
+        <entry endPc="268436284" name="x1" stackId="7" startPc="268436119"/>
+        <entry endPc="268436284" name="y1" stackId="8" startPc="268436119"/>
+        <entry endPc="268436284" name="tickLength" stackId="9" startPc="268436119"/>
+        <entry endPc="268436284" name="tickWidth" stackId="10" startPc="268436119"/>
+        <entry endPc="268436284" name="x2" stackId="11" startPc="268436119"/>
+        <entry endPc="268436284" name="y2" stackId="12" startPc="268436119"/>
+        <entry arg="true" endPc="268436584" name="dc" stackId="1" startPc="268436296"/>
+        <entry arg="true" endPc="268436584" name="angleDeg" stackId="2" startPc="268436296"/>
+        <entry endPc="268436583" name="angleRad" stackId="3" startPc="268436299"/>
+        <entry endPc="268436583" name="handLen" stackId="4" startPc="268436299"/>
+        <entry endPc="268436583" name="tailLen" stackId="5" startPc="268436299"/>
+        <entry endPc="268436583" name="xStart" stackId="6" startPc="268436299"/>
+        <entry endPc="268436583" name="yStart" stackId="7" startPc="268436299"/>
+        <entry endPc="268436583" name="xEnd" stackId="8" startPc="268436299"/>
+        <entry endPc="268436583" name="yEnd" stackId="9" startPc="268436299"/>
+        <entry endPc="268436583" name="circleRadius" stackId="10" startPc="268436299"/>
+        <entry endPc="268436583" name="paddleX" stackId="11" startPc="268436299"/>
+        <entry endPc="268436583" name="paddleY" stackId="12" startPc="268436299"/>
+        <entry arg="true" endPc="268436840" name="dc" stackId="1" startPc="268436622"/>
+        <entry endPc="268436839" name="info" stackId="2" startPc="268436625"/>
+        <entry endPc="268436839" name="clockTime" stackId="3" startPc="268436625"/>
+        <entry endPc="268436839" name="hour" stackId="4" startPc="268436625"/>
+        <entry endPc="268436839" name="min" stackId="5" startPc="268436625"/>
+        <entry endPc="268436839" name="sec" stackId="6" startPc="268436625"/>
+        <entry endPc="268436839" name="hourAngle" stackId="7" startPc="268436625"/>
+        <entry endPc="268436839" name="minAngle" stackId="8" startPc="268436625"/>
+        <entry endPc="268436839" name="secAngle" stackId="9" startPc="268436820"/>
+        <entry arg="true" endPc="268436977" name="dc" stackId="1" startPc="268436841"/>
+    </localVars>
+    <deviceInfo deviceVersion="5c7ae9cf907f88c116a91dc4ffd75be9b5b7d2e9" partNumber="006-B4432-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="58" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/MondaineFaceApp" offset="125" parentId="globals" symbolId="MondaineFaceApp" type="class"/>
+        <dataEntry label="globals/MondaineFaceView" offset="196" parentId="globals" symbolId="MondaineFaceView" type="class"/>
+        <dataEntry label="globals/Rez" offset="366" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/Rez/Drawables" offset="419" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="454" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="489" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435468" name="&lt;init&gt;" parent="MondaineFaceApp" startPc="268435457">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435489" name="getApp" startPc="268435469">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435501" name="&lt;init&gt;" parent="MondaineFaceView" startPc="268435490">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435521" name="&lt;init&gt;" parent="Rez" startPc="268435502">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStart" parent="MondaineFaceApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435549" name="getInitialView" parent="MondaineFaceApp" startPc="268435522">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435564" name="initialize" parent="MondaineFaceApp" startPc="268435550">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStop" parent="MondaineFaceApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435586" name="onExitSleep" parent="MondaineFaceView" startPc="268435565">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435796" name="drawHand" parent="MondaineFaceView" startPc="268435587">
+            <param id="dc"/>
+            <param id="angleDeg"/>
+            <param id="lengthPercent"/>
+            <param id="width"/>
+            <param id="color"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435857" name="onLayout" parent="MondaineFaceView" startPc="268435797">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435954" name="drawBranding" parent="MondaineFaceView" startPc="268435858">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436078" name="drawMoveAlert" parent="MondaineFaceView" startPc="268435955">
+            <param id="dc"/>
+            <param id="level"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436295" name="drawTicks" parent="MondaineFaceView" startPc="268436079">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436584" name="drawSecondHand" parent="MondaineFaceView" startPc="268436296">
+            <param id="dc"/>
+            <param id="angleDeg"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436606" name="onEnterSleep" parent="MondaineFaceView" startPc="268436585">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436621" name="initialize" parent="MondaineFaceView" startPc="268436607">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436840" name="onUpdate" parent="MondaineFaceView" startPc="268436622">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436977" name="WatchFace" parent="Layouts" startPc="268436841">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>
